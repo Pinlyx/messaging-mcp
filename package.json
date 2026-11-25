@@ -1,0 +1,59 @@
+{
+  "name": "messaging-mcp",
+  "version": "0.1.0",
+  "description": "Self-hosted MCP server that lets AI assistants read and answer WhatsApp, Instagram, Messenger and Telegram conversations through the official APIs, and stops messages the platform would reject.",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "whatsapp",
+    "whatsapp-cloud-api",
+    "instagram",
+    "messenger",
+    "telegram",
+    "model-context-protocol",
+    "ai-agent",
+    "customer-support"
+  ],
+  "license": "MIT",
+  "author": "Pinlyx (https://pinlyx.com)",
+  "homepage": "https://github.com/Pinlyx/messaging-mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pinlyx/messaging-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Pinlyx/messaging-mcp/issues"
+  },
+  "type": "module",
+  "bin": {
+    "messaging-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "docs",
+    "examples",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "smoke": "node scripts/smoke.mjs",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "messaging-rules": "^0.1.0",
+    "unified-message": "^0.1.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.9.3",
+    "vitest": "^2.1.9"
+  },
+  "mcpName": "com.pinlyx/messaging-mcp"
+}

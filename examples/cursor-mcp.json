@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "messaging": {
+      "command": "npx",
+      "args": ["-y", "messaging-mcp", "--read-only"],
+      "env": {
+        "TELEGRAM_BOT_TOKEN": "replace-me",
+        "MESSAGING_MCP_DB": "/home/you/.local/share/messaging-mcp/messaging.db"
+      }
+    }
+  }
+}

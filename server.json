@@ -1,0 +1,99 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.pinlyx/messaging-mcp",
+  "description": "WhatsApp, Instagram, Messenger and Telegram inbox for AI assistants on the official APIs.",
+  "repository": {
+    "url": "https://github.com/Pinlyx/messaging-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "messaging-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "WHATSAPP_ACCESS_TOKEN",
+          "description": "WhatsApp Cloud API access token.",
+          "isRequired": false,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "WHATSAPP_PHONE_NUMBER_ID",
+          "description": "WhatsApp phone number id that sends messages.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "WHATSAPP_BUSINESS_ACCOUNT_ID",
+          "description": "WhatsApp Business Account id, needed to list templates.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "META_APP_SECRET",
+          "description": "Meta app secret, used to verify webhook signatures.",
+          "isRequired": false,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "META_VERIFY_TOKEN",
+          "description": "Token you choose for the Meta webhook subscribe check.",
+          "isRequired": false,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "MESSENGER_PAGE_ACCESS_TOKEN",
+          "description": "Facebook Page access token for Messenger.",
+          "isRequired": false,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "MESSENGER_PAGE_ID",
+          "description": "Facebook Page id for Messenger.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "INSTAGRAM_ACCESS_TOKEN",
+          "description": "Instagram access token (Instagram API with Instagram Login).",
+          "isRequired": false,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "INSTAGRAM_ACCOUNT_ID",
+          "description": "Instagram professional account id.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "TELEGRAM_BOT_TOKEN",
+          "description": "Telegram bot token from BotFather.",
+          "isRequired": false,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "MESSAGING_MCP_DB",
+          "description": "Path of the local message database. Optional.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}

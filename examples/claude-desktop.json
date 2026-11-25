@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "messaging": {
+      "command": "npx",
+      "args": ["-y", "messaging-mcp"],
+      "env": {
+        "WHATSAPP_ACCESS_TOKEN": "replace-me",
+        "WHATSAPP_PHONE_NUMBER_ID": "replace-me",
+        "WHATSAPP_BUSINESS_ACCOUNT_ID": "replace-me",
+        "MESSENGER_PAGE_ACCESS_TOKEN": "replace-me",
+        "MESSENGER_PAGE_ID": "replace-me",
+        "INSTAGRAM_ACCESS_TOKEN": "replace-me",
+        "INSTAGRAM_ACCOUNT_ID": "replace-me",
+        "TELEGRAM_BOT_TOKEN": "replace-me"
+      }
+    }
+  }
+}
