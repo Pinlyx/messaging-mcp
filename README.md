@@ -1,5 +1,9 @@
 # messaging-mcp
 
+[![npm](https://img.shields.io/npm/v/messaging-mcp.svg)](https://www.npmjs.com/package/messaging-mcp) [![CI](https://github.com/Pinlyx/messaging-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/Pinlyx/messaging-mcp/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-com.pinlyx%2Fmessaging--mcp-0ea5e9)](https://registry.modelcontextprotocol.io/v0/servers?search=com.pinlyx/messaging-mcp)
+
+![messaging-mcp](docs/images/messaging-mcp-social-preview.png)
+
 Let your AI assistant read and answer your customers' WhatsApp, Instagram, Messenger and Telegram conversations through the official APIs, with a self-hosted MCP server that stops a reply the platform would reject before it is sent.
 
 ## Why
