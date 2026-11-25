@@ -21,3 +21,15 @@ jobs:
       - run: npm test
       - name: Demo server answers over stdio
         run: npm run smoke
+
+  docker:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t messaging-mcp .
+      - name: Container answers an MCP initialize request
+        run: |
+          req='{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"ci","version":"1"}}}'
+          out=$( (echo "$req"; sleep 3) | docker run -i --rm messaging-mcp --demo )
+          echo "$out"
+          echo "$out" | grep -q '"serverInfo"'
